@@ -14,7 +14,7 @@ hero:
       text: 测试按钮
       link: /guide/what-is-vitepress
   image:
-    src: /biaoti.svg
+    src: https://api.mtyqx.cn/api/random.php
     alt: 知识库插图
     style: "max-width: 480px;"
 

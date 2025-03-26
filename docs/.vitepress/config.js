@@ -33,7 +33,7 @@ export default {
       ],
       footer: { // 页脚
         message: 'Released under the MIT License.',
-        copyright: 'Copyright © 2024-present Your Name'
+        copyright: 'Copyright © 2024-present '
       },
       algolia: { // 搜索配置（可选）
         appId: '...',
