@@ -24,11 +24,11 @@ features:
       name: carbon:code
       color: "#42b883"
   - icon: 
-     src: /icons/logo.png
-    title: 项目文档
-    details: 完整项目说明与API参考
-    link: /api-reference
-    linkText: 浏览文档
+     src: /icons/FNnas.png
+    title: 飞牛影视
+    details: 个人托管影视
+    link: https://fn.cgs.wiki:82
+    linkText: 访问飞牛影视
     customIcon: 
       name: mdi:bookshelf
       color: "#647eff"
