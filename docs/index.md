@@ -13,6 +13,10 @@ hero:
     - theme: alt
       text: 测试按钮
       link: /guide/what-is-vitepress
+  image:
+    src: /biaoti.svg
+    alt: 知识库插图
+    style: "max-width: 480px;"
 
 features:
   - icon: ⚡
@@ -54,29 +58,78 @@ features:
 
 <style>
 /* 自定义卡片效果 */
-:root {
-  --vp-home-feature-icon-size: 48px;
+/* 渐变文字效果 */
+.clip-text {
+  background: linear-gradient(
+    120deg,
+    #42d392 25%, 
+    #647eff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
 
-.VPFeature {
-  transition: transform 0.25s ease;
-  border: 1px solid var(--vp-c-divider-light);
-  border-radius: 8px;
-  padding: 24px;
+/* 响应式图片容器 */
+@media (min-width: 960px) {
+  .VPImage {
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+    transition: filter 0.3s ease;
+  }
+  
+  .VPImage:hover {
+    filter: drop-shadow(0 16px 32px rgba(0,0,0,0.12));
+  }
 }
 
-.VPFeature:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+@media (max-width: 960px) {
+  .clip-text {
+    font-size: 2.5rem;
+  }
+  
+  .VPImage {
+    display: none;
+  }
 }
 
-.VPFeature .icon {
-  margin-bottom: 16px;
+/* 布局调整 */
+.VPHero {
+  position: relative;
+  padding-top: 96px !important;
+  padding-bottom: 96px !important;
 }
 
-.custom-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
+.VPHero.has-image .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
 }
+
+.VPHero .main {
+  flex: 1;
+  max-width: 592px;
+}
+
+.VPHero .image-container {
+  flex: 1;
+  max-width: 480px;
+}
+
 </style>
+<script setup>
+import { ref, onMounted } from 'vue'
+
+onMounted(() => {
+  // 动态应用渐变文字
+  const heroTitle = document.querySelector('.VPHomeHero .name')
+  if (heroTitle) {
+    heroTitle.innerHTML = `<span class="clip-text">${heroTitle.textContent}</span>`
+  }
+})
+</script>
