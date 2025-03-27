@@ -17,7 +17,7 @@ hero:
 
 features:
   - icon: 
-     src:/icons/filebox.svg
+     src: /icons/filebox.svg
     title: 文件快递柜
     details: 匿名口令分享文本，文件，像拿快递一样取文件
     link: https://filebox.cgs.wiki:82/#/
