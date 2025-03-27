@@ -1,10 +1,10 @@
 export default {
     title: '我的文档', // 网站标题
     description: '个人技术文档库', // SEO描述
-    base: "/web/",
-    vite: {
-      publicDir: '../public'
-    },
+    base: process.env.NODE_ENV === 'production' 
+    ? '/web/'   // 注意斜杠必须存在
+    : '/',
+    
   // 确保正确配置 public 目录
   
     themeConfig: {
