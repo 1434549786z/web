@@ -6,9 +6,7 @@ export default {
     : '/',
   
   // 确保正确配置 public 目录
-  vite: {
-    publicDir: '../public'
-  },
+  
     themeConfig: {
       logo: '/logo.png', // 导航栏logo
       nav: [ // 导航栏
