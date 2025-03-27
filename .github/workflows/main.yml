@@ -7,11 +7,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
-
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -20,22 +15,28 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 20
-        cache: 'npm'
 
     - name: Install dependencies
       run: npm install
 
-    - name: Build docs
-      run: npm run build
-
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+    # 添加缓存优化
+    - name: Cache dependencies
+      uses: actions/cache@v3
       with:
-        path: docs/.vitepress/dist
+        path: node_modules
+        key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-npm-
+
+    # 验证构建步骤
+    - name: Build verification
+      run: npx vitepress --version
+
+    - name: Build docs
+      run: npm run docs:build
 
     - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/.vitepress/dist
