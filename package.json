@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build --out docs",
+    "docs:build": "vitepress build --out docs",
     "preview": "vitepress preview docs",
     "deploy": "gh-pages -d docs"
   },
