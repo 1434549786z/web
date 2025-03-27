@@ -16,11 +16,12 @@ hero:
 
 
 features:
-  - icon: ⚡
-    title: 测试按钮
-    details: 
-    link: https://baidu.com
-    linkText: 查看案例
+  - icon: 
+     src:/icons/filebox.svg
+    title: 文件快递柜
+    details: 匿名口令分享文本，文件，像拿快递一样取文件
+    link: https://filebox.cgs.wiki:82/#/
+    linkText: 前往
     customIcon: 
       name: carbon:code
       color: "#42b883"
