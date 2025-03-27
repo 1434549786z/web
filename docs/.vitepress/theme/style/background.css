@@ -1,0 +1,27 @@
+/* 基础背景样式 */
+body {
+    background-image: url(https://api.mtyqx.cn/api/random.php);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+  }
+  
+  /* 背景遮罩层 */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.92);  /* 浅色模式遮罩 */
+    z-index: -1;
+    transition: background 0.5s ease;
+  }
+  
+  /* 深色模式适配 */
+  .dark body::after {
+    background: rgba(0,0,0,0.88);  /* 深色模式遮罩 */
+  }

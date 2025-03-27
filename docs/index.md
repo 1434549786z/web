@@ -13,15 +13,12 @@ hero:
     - theme: alt
       text: 测试按钮
       link: /guide/what-is-vitepress
-  image:
-    src: https://api.mtyqx.cn/api/random.php
-    alt: 知识库插图
-    style: "max-width: 480px;"
+
 
 features:
   - icon: ⚡
-    title: 技术实践
-    details: 日常开发最佳实践与解决方案
+    title: 测试按钮
+    details: 
     link: https://baidu.com
     linkText: 查看案例
     customIcon: 
