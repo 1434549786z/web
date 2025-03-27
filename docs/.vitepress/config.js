@@ -4,7 +4,6 @@ export default {
     base: process.env.NODE_ENV === 'production' 
     ? '/web/'   // 注意斜杠必须存在
     : '/',
-    
   // 确保正确配置 public 目录
   
     themeConfig: {
