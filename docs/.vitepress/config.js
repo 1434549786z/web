@@ -10,7 +10,7 @@ export default {
         { text: '指南', link: '/guide/getting-started' },
         { text: '示例', link: '/examples/basic-usage' },
         { text: 'API', link: '/api/core-api' },
-        { text: '更新日志', link: 'https://github.com/...' }
+        { text: '更新日志', link: 'https://github.com/1434549786z/web' }
       ],
       sidebar: { // 侧边栏导航
         '/guide/': [
@@ -32,7 +32,7 @@ export default {
         ]
       },
       socialLinks: [ // 社交链接
-        { icon: 'github', link: 'https://github.com/yourname' },
+        { icon: 'github', link: 'https://github.com/1434549786z' },
       ],
       footer: { // 页脚
         message: 'Released under the MIT License.',
