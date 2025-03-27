@@ -1,7 +1,14 @@
 export default {
     title: '我的文档', // 网站标题
     description: '个人技术文档库', // SEO描述
-    base: '/仓库名/', // 必须与GitHub仓库名一致（如仓库是my-docs，则填/my-docs/）
+    base: process.env.NODE_ENV === 'production' 
+    ? '/web/'   // 注意斜杠必须存在
+    : '/',
+  
+  // 确保正确配置 public 目录
+  vite: {
+    publicDir: '../public'
+  },
     themeConfig: {
       logo: '/logo.png', // 导航栏logo
       nav: [ // 导航栏
