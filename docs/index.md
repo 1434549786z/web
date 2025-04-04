@@ -47,7 +47,7 @@ features:
      src: /icons/ai.svg
     title: OpenWebUi
     details: 个人自托管 AI 平台
-    link: https://ai.cgs.wiki:82
+    link: https://aifree.cgs.wiki:82
     linkText: 前往
     customIcon: 
       name: carbon:code
