@@ -11,8 +11,8 @@ hero:
       text: 开始探索 →
       link: /guide/getting-started
     - theme: alt
-      text: 测试按钮
-      link: /guide/what-is-vitepress
+      text: AI界面
+      link: /ai-chat
 
 
 features:

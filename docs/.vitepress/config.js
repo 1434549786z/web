@@ -18,7 +18,8 @@ export default {
             text: '指南',
             items: [
               { text: '快速开始', link: '/guide/getting-started' },
-              { text: '配置指南', link: '/guide/configuration' }
+              { text: '配置指南', link: '/guide/configuration' },
+              { text: 'AI 聊天界面', link: '/ai-chat' }
             ]
           }
         ],
