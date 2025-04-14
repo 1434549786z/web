@@ -52,6 +52,15 @@ features:
     customIcon: 
       name: carbon:code
       color: "#42b883"
+  - icon: 
+     src: /icons/sylogo.svg
+    title: 思源笔记
+    details: 自托管笔记平台
+    link: https://synote.cgs.wiki:82
+    linkText: 前往
+    customIcon: 
+      name: carbon:code
+      color: "#42b883"
 ---
 
 <style>
