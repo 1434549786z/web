@@ -1,8 +1,10 @@
 # AI 聊天界面
 
-<iframe
-src="https://ai1.cgs.wiki:82/ui/chat/d6f27382d566967a"
-style="width: 100vw; height: calc(100vh - 100px); position: fixed; top: 0; left: 0; border: none;"
-frameborder="0"
-allow="microphone">
-</iframe>
+<div style="position: fixed; top: 60px; left: 0; width: 100vw; height: calc(100vh - 60px);">
+  <iframe
+    src="https://dify.cgs.wiki:82/e/2cmq3t0f8fyi4ouz/"
+    style="width: 100%; height: 100%; border: none;"
+    frameborder="0"
+    allow="microphone">
+  </iframe>
+</div>
