@@ -62,7 +62,7 @@ features:
       name: carbon:code
       color: "#42b883"
   - icon: 
-     src: https://chat.cgs.wiki:82/api/resource/organization/logo?t=1749628985661
+     src: https://voce.chat/favicon.ico
     title: 匿名聊天室
     details: 自托管聊天室
     link: https://chat.cgs.wiki:82
