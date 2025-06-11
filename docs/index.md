@@ -61,6 +61,15 @@ features:
     customIcon: 
       name: carbon:code
       color: "#42b883"
+  - icon: 
+     src: https://chat.cgs.wiki:82/api/resource/organization/logo?t=1749628985661
+    title: 匿名聊天室
+    details: 自托管聊天室
+    link: https://chat.cgs.wiki:82
+    linkText: 前往
+    customIcon: 
+      name: carbon:code
+      color: "#42b883"
 ---
 
 <style>
@@ -128,6 +137,13 @@ features:
   max-width: 480px;
 }
 
+  #dify-chatbot-bubble-button {
+    background-color: #1C64F2 !important;
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+  }
 </style>
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -138,5 +154,20 @@ onMounted(() => {
   if (heroTitle) {
     heroTitle.innerHTML = `<span class="clip-text">${heroTitle.textContent}</span>`
   }
+
+  window.difyChatbotConfig = {
+    token: 'KhlvRxZAdrvhYx5u',
+    baseUrl: 'http://192.168.22.8',
+    systemVariables: {
+      // user_id: 'YOU CAN DEFINE USER ID HERE',
+      // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+    },
+  }
+
+  const script = document.createElement('script');
+  script.src = "http://192.168.22.8/embed.min.js";
+  script.id = "KhlvRxZAdrvhYx5u";
+  script.defer = true;
+  document.head.appendChild(script);
 })
 </script>
